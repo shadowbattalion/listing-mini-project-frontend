@@ -21,7 +21,7 @@ export default function Panel () {
   console.log(list)
   return (
     <div style={{width: "50%", margin:"auto", marginTop:"100px"}}>
-      <div>Page: {currentPage}</div>
+      <div><h3>Page: {currentPage}</h3></div>
       <nav>
         <ul className="pagination">
           <li className="page-item">
@@ -34,7 +34,7 @@ export default function Panel () {
         </ul>
       </nav>
       <input type="input" placeholder="Search email" className="form-control form-control-lg" id="formFileLg" onChange={handleSearch}/>
-      {list.map((item) => (
+      {list?.map((item) => (
         <div key={item.id} className="card" style={{marginTop:"10px"}}>
         <div className="card-body">
           <h5 className="card-title">Name: {item.name}</h5>

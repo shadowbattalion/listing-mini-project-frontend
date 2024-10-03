@@ -40,7 +40,6 @@ export default function  useHandleUpload(){
       response.data?setUploadOutcome("file uploaded successfully"):setUploadOutcome("fail to upload")
 
       } catch (e){
-        console.log(e)
         setUploadOutcome("Please enter a file")
         
       }
