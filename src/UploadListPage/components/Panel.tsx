@@ -16,13 +16,13 @@ export default function Panel() {
       <div className="card-body">
         <form onSubmit={(e)=>{handleSubmit(e, setUploadOutcome, setUploadProgress)}}>
           <h1>Upload A File</h1>
-          <input type="file" className="form-control form-control-lg" id="formFileLg" onChange={(e)=>{handleChange(e)}}/>
-          <button className="btn btn-dark" type="submit">Upload</button>
+          <input data-testid="upload" type="file" className="form-control form-control-lg" id="formFileLg" onChange={(e)=>{handleChange(e)}}/>
+          <button data-testid="uploadButton" className="btn btn-dark" type="submit">Upload</button>
         </form>
         {uploadProgress?<div className="progress" role="progressbar">
           <div className="progress-bar" style={{width: uploadProgress+"%"}}>{uploadProgress}%</div>
         </div>:<div></div>}
-        <div><small>{uploadOutcome}</small></div>
+        <div><small data-testid="outcome">{uploadOutcome}</small></div>
       </div>
     </div>
   );
