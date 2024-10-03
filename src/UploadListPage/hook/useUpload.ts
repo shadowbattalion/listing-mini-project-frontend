@@ -46,6 +46,6 @@ export default function  useHandleUpload(){
       }
     }
 
-    return {handleChange:handleChange, handleSubmit:handleSubmit}
+    return {handleChange, handleSubmit}
 
 }
