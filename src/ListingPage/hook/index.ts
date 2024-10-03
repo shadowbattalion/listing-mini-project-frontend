@@ -9,7 +9,7 @@ export default function usePaginateAndSearch (setList) {
   
     const fetchList = async (page) => {
     try {
-            const response = await axios.get(`http://localhost:9000/api/list/?searchKey=${searchKey}&page=${page}&pageSize=25`); 
+            const response = await axios.get(`http://localhost:9000/api/list/get?searchKey=${searchKey}&page=${page}&pageSize=25`); 
             const { list, totalPages } = response.data;
             setList(list);
             setTotalPages(totalPages);

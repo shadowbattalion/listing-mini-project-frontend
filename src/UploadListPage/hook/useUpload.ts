@@ -18,7 +18,7 @@ export default function  useHandleUpload(){
       try
       {
       event.preventDefault()
-      const url = 'http://localhost:9000/api/list/upload';
+      const url = 'http://localhost:9000/api/list/';
       const formData = new FormData();
       formData.append('file', file);
       formData.append('fileName', file.name);

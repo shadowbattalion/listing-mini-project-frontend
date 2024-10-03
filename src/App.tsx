@@ -10,14 +10,14 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={
+          <Route path="/get" element={
             <div>
               <Nav/>
               <ListingPage/>
             </div>
           }/>
           
-          <Route path="/upload" element={
+          <Route path="/" element={
             <div>
               <Nav/>
               <UploadListPage/>
