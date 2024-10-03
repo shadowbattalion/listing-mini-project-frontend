@@ -6,8 +6,8 @@ import usePaginate from '../hook';
 export default function Panel () {
   
   const [list, setList] = useState([]);
-
-  const {prev,current,next, currentPage, totalPages}= usePaginate(setList) 
+  const {prev,current,next, currentPage, totalPages, handleSearch}= usePaginate(setList)
+  
 
   const numberList = ()=>{
       let numberList = []
@@ -18,7 +18,7 @@ export default function Panel () {
     }
   
   
-
+  console.log(list)
   return (
     <div style={{width: "50%", margin:"auto", marginTop:"100px"}}>
       <div>Page: {currentPage}</div>
@@ -33,7 +33,7 @@ export default function Panel () {
           </li>
         </ul>
       </nav>
-
+      <input type="input" placeholder="Search email" className="form-control form-control-lg" id="formFileLg" onChange={handleSearch}/>
       {list.map((item) => (
         <div key={item.id} className="card" style={{marginTop:"10px"}}>
         <div className="card-body">
