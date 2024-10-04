@@ -17,6 +17,7 @@ To create the mockServiceWorker.js file:
 
 
 ## Backend setup
+Github repo: https://github.com/shadowbattalion/listing-mini-project-backend2
 
 To run the backend:
 <b>npm run start</b>
