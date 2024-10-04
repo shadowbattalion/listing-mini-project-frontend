@@ -18,9 +18,10 @@ To create the mockServiceWorker.js file:
 
  <p>
    Due to Axios making request to the backend while the MSW is on, testing on the front end has been limited as the application can only get data from the backend and not test data from MSW, although MSW is turned on.
-   This was an issue raised here: https://stackoverflow.com/questions/77852097/msw-handler-correctly-intercepting-request-but-still-resulting-axios-network-er and here https://stackoverflow.com/questions/77804153/reactjs-msw-mock-handlers-failing-with-error-network-request-failed. However the solutions are not workable and quite limited.
- </p>
-
+   This was an issue raised here: 
+   <li>https://stackoverflow.com/questions/77852097/msw-handler-correctly-intercepting-request-but-still-resulting-axios-network-er</li>
+   <li> https://stackoverflow.com/questions/77804153/reactjs-msw-mock-handlers-failing-with-error-network-request-failed.</li> 
+ <p>However the solutions are not workable and quite limited.</p>
  <p>
    Therefore, in order to run successful test (test passed non-testing environment), before testing:
      <li>run both  frontend and backend</li>
