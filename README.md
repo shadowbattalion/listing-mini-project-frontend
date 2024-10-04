@@ -3,16 +3,16 @@
 ## Frontend setup
 
 To run the frontend: 
-  npm run dev
+  <b>npm run dev</b>
 
 To start the frontend with MSW (must be run alongside npm run test):
-  npm run dev-msw
+  <b>npm run dev-msw</b>
 
 To start the frontend test:
-  npm run test
+ <b> npm run test</b>
 
 To create the mockServiceWorker.js file
-  npm run msw-init
+ <b> npm run msw-init</b>
 
 
 
