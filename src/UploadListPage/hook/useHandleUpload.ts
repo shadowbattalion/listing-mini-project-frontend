@@ -32,8 +32,12 @@ export default function  useHandleUpload(){
         };
 
         const response = await axios.post(url, formData, config)
+        // Axios throwing Network Error despite MSW running and hitting the handlers.
+        // (for testing) Whole flow works during testing. Use the following and comment out the above statement. 
+        // const response = {data:{"test":test}} 
 
-        response.data?setUploadOutcome("file uploaded successfully"):setUploadOutcome("fail to upload")
+
+        response.data?setUploadOutcome("File uploaded successfully"):setUploadOutcome("Fail to upload")
         
       }else{
         setUploadOutcome("Please enter a file")

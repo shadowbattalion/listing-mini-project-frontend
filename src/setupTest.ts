@@ -1,7 +1,7 @@
 import { expect, afterEach, beforeAll, afterAll } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import * as matchers from "@testing-library/jest-dom/matchers";
-import { worker } from './msw/workers';
+import { server } from './msw/server';
 expect.extend(matchers);
 
 afterEach(() => {
@@ -9,10 +9,10 @@ afterEach(() => {
   });
   
   // Start worker before all tests
-  beforeAll(() => { worker.listen() })
+  beforeAll(() => { server.listen() })
   
   //  Close worker after all tests
-  afterAll(() => {worker.close()})
+  afterAll(() => {server.close()})
   
   // Reset handlers after each test `important for test isolation`
-  afterEach(() => {worker.resetHandlers()})
+  afterEach(() => {server.resetHandlers()})

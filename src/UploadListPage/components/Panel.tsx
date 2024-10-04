@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import useHandleUpload from "../hook/useUpload";
+import useHandleUpload from "../hook/useHandleUpload";
 
 
 export default function Panel() {

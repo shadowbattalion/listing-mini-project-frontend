@@ -10,13 +10,12 @@ export default function Panel () {
   const numberList = ()=>{
       let numberList:ReactElement[] = []
       for(let i=0; i < totalPages; i++){
-        numberList.push((<li key={i+1} className="page-item"><div className="page-link" onClick={()=>{current(i+1)}}>{i+1}</div></li>))
+        numberList.push((<li key={i+1} className="page-item"><div data-testid="paginationButton" className="page-link" onClick={()=>{current(i+1)}}>{i+1}</div></li>))
       }
       return numberList
     }
   
   
-  console.log(list)
   return (
     <div style={{width: "50%", margin:"auto", marginTop:"100px"}}>
       <div><h3>Page: {currentPage}</h3></div>
@@ -33,7 +32,7 @@ export default function Panel () {
       </nav>
       <input type="input" placeholder="Search email" className="form-control form-control-lg" id="formFileLg" onChange={handleSearch}/>
       {list?.map((item: ItemType) => (
-        <div key={item.id} className="card" style={{marginTop:"10px"}}>
+        <div data-testid="cards" key={item.id} className="card" style={{marginTop:"10px"}}>
         <div className="card-body">
           <h5 className="card-title">Name: {item.name}</h5>
           <h6 className="card-subtitle mb-2 text-body-secondary">Email: {item.email}</h6>
