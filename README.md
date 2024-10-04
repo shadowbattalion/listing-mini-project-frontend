@@ -20,13 +20,14 @@ To create the mockServiceWorker.js file:
    Due to Axios making request to the backend while the MSW is on, testing on the front end has been limited as the application can only get data from the backend and not test data from MSW, although MSW is turned on.
    This was an issue raised here: 
    <li>https://stackoverflow.com/questions/77852097/msw-handler-correctly-intercepting-request-but-still-resulting-axios-network-er</li>
-   <li> https://stackoverflow.com/questions/77804153/reactjs-msw-mock-handlers-failing-with-error-network-request-failed.</li> 
+   <li>https://stackoverflow.com/questions/77804153/reactjs-msw-mock-handlers-failing-with-error-network-request-failed.</li> 
+   
  <p>However the solutions are not workable and quite limited.</p>
  <p>
    Therefore, in order to run successful test (test passed non-testing environment), before testing:
-     <li>run both  frontend and backend</li>
+     <li>run both frontend (npm run dev-msw) and backend(npm run start)</li>
      <li>upload data.csv file on the browser</li>
-     <li>run tests</li>
+     <li>run tests (npm run test) </li>
  </p>
 
 
@@ -64,6 +65,16 @@ To run the backend:
 
 ### Objectives met
 
+- Upload a CSV file
+- Appropriate feedback to the user on the upload progress.
+
+- List the data uploaded 
+- With pagination.
+
+- Search data from the uploaded file. 
+- The web application should be responsive while:
+	1) Listing of data 
+	2) Searching of data.
 
 
 
