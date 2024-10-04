@@ -83,4 +83,4 @@ To run the backend:
 
 <p>As state at the top, I faced some delays during the testing phase due to the time spent figuring out the MSW and Axios issue.</p>
 <p>For example, in order for a component to appear, a http respond needs to happen. When I shutdown the backend, there shouldn't be any issue running the component that does the http request during testing as I am using the MSW to redirect the request. The problem is that Axios is making request to both MSW and the backend. Therefore, there will be error during testing if the backend isn't up and running. My time was spent a lot on finding out the source of the problem and finding solutions which are rather limited and not workable.</p>
-<p>As a result, I tested what I can so that most of the basic tests are done.</p>
+<p>As a result, I tested what I can so that most of the basic tests are done for the frontend.</p>
