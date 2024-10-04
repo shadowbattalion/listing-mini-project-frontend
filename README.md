@@ -23,9 +23,9 @@ To create the mockServiceWorker.js file:
 
  <p>
    Therefore, in order to run successful test (test passed non-testing environment), before testing:
-     *run both  frontend and backend
-     *upload data.csv file on the browser
-     *run tests
+     <li>run both  frontend and backend</li>
+     <li>upload data.csv file on the browser</li>
+     <li>run tests</li>
  </p>
 
 
