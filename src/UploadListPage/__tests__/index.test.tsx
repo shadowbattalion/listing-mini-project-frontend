@@ -1,4 +1,4 @@
-import { screen, render, waitFor } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import Panel from "../components/Panel";
 import userEvent from '@testing-library/user-event';
 
