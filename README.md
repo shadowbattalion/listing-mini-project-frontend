@@ -66,13 +66,13 @@ To run the backend:
 ### Objectives met
 
 - Upload a CSV file
-- Appropriate feedback to the user on the upload progress.
+- Progress bar.
 
-- List the data uploaded 
-- With pagination.
+- Listing uploaded data 
+- Server side pagination.
 
-- Search data from the uploaded file. 
-- The web application should be responsive while:
+- Search data from the uploaded file (using email to search). 
+- Ensure responsive website while:
 	1) Listing of data 
 	2) Searching of data.
 
@@ -80,3 +80,7 @@ To run the backend:
 
 
 ### Issues faced
+
+<p>As state at the top, I faced some delays during the testing phase due to the time spent figuring out the MSW and Axios issue.</p>
+<p>For example, in order for a component to appear, a http respond needs to happen. When I shutdown the backend, there shouldn't be any issue running the component that does the http request during testing as I am using the MSW to redirect the request. The problem is that Axios is making request to both MSW and the backend. Therefore, there will be error during testing if the backend isn't up and running. My time was spent a lot on finding out the source of the problem and finding solutions which are rather limited and not workable.</p>
+<p>As a result, I tested what I can so that most of the basic tests are done.</p>
