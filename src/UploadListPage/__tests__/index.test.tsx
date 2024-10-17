@@ -37,8 +37,8 @@ describe("File upload", () => {
     const user = userEvent.setup();
       
     const str = JSON.stringify({mock:"test"});
-    const blob = new Blob([str]);
-    const file = new File([blob], 'data.csv', { type: 'text/plain' });
+    const blob = new Blob([str]);//redundant
+    const file = new File([str], 'data.csv', { type: 'text/plain' });
 
 
     const uploadElement = screen.getByTestId('upload');
@@ -47,7 +47,7 @@ describe("File upload", () => {
     
     const uploadButtonElement=screen.getByTestId('uploadButton');
     await user.click(uploadButtonElement)
-    expect(screen.queryByText('File uploaded successfully'))
+    expect(await screen.findByText('File uploaded successfully')).toBeInTheDocument()
 
    
 

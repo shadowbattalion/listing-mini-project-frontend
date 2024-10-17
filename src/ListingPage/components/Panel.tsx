@@ -22,15 +22,15 @@ export default function Panel () {
       <nav>
         <ul className="pagination">
           <li className="page-item">
-            <div className="page-link" onClick={prev} >Previous</div>
+            <div className="page-link" data-testid="prev" onClick={prev} >Previous</div>
           </li>
           {numberList()}
           <li className="page-item">
-            <div className="page-link" onClick={next}>Next</div>
+            <div className="page-link" data-testid="next" onClick={next}>Next</div>
           </li>
         </ul>
       </nav>
-      <input type="input" placeholder="Search email" className="form-control form-control-lg" id="formFileLg" onChange={handleSearch}/>
+      <input type="input" data-testid="search" placeholder="Search email" className="form-control form-control-lg" id="formFileLg" onChange={handleSearch}/>
       {list?.map((item: ItemType) => (
         <div data-testid="cards" key={item.id} className="card" style={{marginTop:"10px"}}>
         <div className="card-body">

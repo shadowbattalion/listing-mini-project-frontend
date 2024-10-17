@@ -26,9 +26,9 @@ export default function  useHandleUpload(){
         formData.append('file', file);
         formData.append('fileName', file.name);
         const config = {
-          headers: {
-            'content-type': 'multipart/form-data',
-          },
+          // headers: {
+          //   'content-type': 'multipart/form-data',
+          // },
           onUploadProgress: (data:any) => {
             setUploadProgress(Math.round((data.loaded/data.total)*100))
           }
